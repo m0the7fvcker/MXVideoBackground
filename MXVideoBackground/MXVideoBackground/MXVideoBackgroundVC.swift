@@ -61,7 +61,9 @@ class MXVideoBackgroundVC: UIViewController {
     
     var alwaysRepeat: Bool = true {
         didSet {
-            NotificationCenter.default.addObserver(self, selector: #selector(MXVideoBackgroundVC.repeatPlay), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: videoPlayer.player?.currentItem)
+            if alwaysRepeat {
+                NotificationCenter.default.addObserver(self, selector: #selector(MXVideoBackgroundVC.repeatPlay), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: videoPlayer.player?.currentItem)
+            }
         }
     }
     

@@ -25,6 +25,7 @@ class ViewController: MXVideoBackgroundVC {
         videoFrame = view.frame
         contentUrl = URL(fileURLWithPath: Bundle.main.path(forResource: "moments", ofType: "mp4")!)
         backgroundSound = true
+        alwaysRepeat = true
         contentMode = .MXVideoContentModeResize
         startTime = 2.0
         alpha = 0.8
