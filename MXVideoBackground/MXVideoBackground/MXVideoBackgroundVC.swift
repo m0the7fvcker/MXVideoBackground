@@ -61,21 +61,33 @@ class MXVideoBackgroundVC: UIViewController {
     
     var alwaysRepeat: Bool = true {
         didSet {
-            
+            NotificationCenter.default.addObserver(self, selector: #selector(MXVideoBackgroundVC.repeatPlay), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: videoPlayer.player?.currentItem)
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         videoPlayer.view.frame = videoFrame
+        videoPlayer.showsPlaybackControls = false
         view.addSubview(videoPlayer.view)
         view.sendSubview(toBack: videoPlayer.view)
     }
 
     private func configVideoPlayer(url: URL) {
-        videoPlayer.player = AVPlayer(url: url)
+        MXVideoTool.cropVideoWith(url: url, startTime: startTime, duration: durationTime) { (url, error) -> ()? in
+            DispatchQueue.main.async {
+                if (url != nil) {
+                    self.videoPlayer.player = AVPlayer(url: url!)
+                    self.videoPlayer.player?.play()
+                    self.videoPlayer.player?.volume = self.soundLevel
+                }
+            }
+        }
+    }
+    
+    func repeatPlay() {
+        videoPlayer.player?.seek(to: kCMTimeZero)
         videoPlayer.player?.play()
-        videoPlayer.player?.volume = soundLevel
     }
 
 }

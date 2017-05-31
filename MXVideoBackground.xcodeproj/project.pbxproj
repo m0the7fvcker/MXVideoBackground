@@ -15,6 +15,7 @@
 		4DBF122F1EDEBC9200AB9288 /* MXVideoBackgroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF122E1EDEBC9200AB9288 /* MXVideoBackgroundUITests.swift */; };
 		4DBF123E1EDEC0FC00AB9288 /* MXVideoTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF123D1EDEC0FC00AB9288 /* MXVideoTool.swift */; };
 		4DFE8A051EDED4A700623FE6 /* MXVideoBackgroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE8A041EDED4A700623FE6 /* MXVideoBackgroundVC.swift */; };
+		4DFE8A071EDEF27F00623FE6 /* moments.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4DFE8A031EDED1B600623FE6 /* moments.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFE8A071EDEF27F00623FE6 /* moments.mp4 in Resources */,
 				4DBF12241EDEBC9100AB9288 /* LaunchScreen.storyboard in Resources */,
 				4DBF12211EDEBC9100AB9288 /* Assets.xcassets in Resources */,
 				4DBF121F1EDEBC9100AB9288 /* Main.storyboard in Resources */,

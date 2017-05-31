@@ -22,7 +22,6 @@ class ViewController: MXVideoBackgroundVC {
     }
     
     func initConfig() {
-        let path = Bundle.main.path(forResource: "moments", ofType: "mp4")
         videoFrame = view.frame
         contentUrl = URL(fileURLWithPath: Bundle.main.path(forResource: "moments", ofType: "mp4")!)
         backgroundSound = true
