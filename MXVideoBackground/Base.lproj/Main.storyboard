@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MXVideoBackground" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ambience-1" translatesAutoresizingMaskIntoConstraints="NO" id="ax4-44-yAm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouz-Mf-mVw">
+                                <rect key="frame" x="30" y="497" width="315" height="40"/>
+                                <color key="backgroundColor" red="0.091221630819999996" green="0.68066966529999995" blue="0.016863741920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="43j-FV-Ee6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="login"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwj-Cm-6lB">
+                                <rect key="frame" x="30" y="557" width="315" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xPN-j8-EWF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="sign up"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-secondary-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Zoj-6x-vll">
+                                <rect key="frame" x="78.5" y="80" width="218" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="TWx-fb-Koj"/>
+                                    <constraint firstAttribute="width" constant="218" id="s5c-ec-YLV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ax4-44-yAm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3og-w0-H1a"/>
+                            <constraint firstItem="Zoj-6x-vll" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="7CY-e4-vUH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lwj-Cm-6lB" secondAttribute="bottom" constant="70" id="80q-4O-07O"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ax4-44-yAm" secondAttribute="bottom" id="ICm-Bv-OkJ"/>
+                            <constraint firstItem="lwj-Cm-6lB" firstAttribute="top" secondItem="ouz-Mf-mVw" secondAttribute="bottom" constant="20" id="Jo5-2P-ZXx"/>
+                            <constraint firstItem="lwj-Cm-6lB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="LAJ-Rf-YQq"/>
+                            <constraint firstItem="lwj-Cm-6lB" firstAttribute="trailing" secondItem="ouz-Mf-mVw" secondAttribute="trailing" id="OzW-df-KXI"/>
+                            <constraint firstAttribute="trailing" secondItem="lwj-Cm-6lB" secondAttribute="trailing" constant="30" id="dbm-gv-gTD"/>
+                            <constraint firstAttribute="trailing" secondItem="ax4-44-yAm" secondAttribute="trailing" id="lKZ-S1-EXS"/>
+                            <constraint firstItem="lwj-Cm-6lB" firstAttribute="leading" secondItem="ouz-Mf-mVw" secondAttribute="leading" id="lvz-Pp-arT"/>
+                            <constraint firstItem="ax4-44-yAm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ue0-jB-iXl"/>
+                            <constraint firstItem="ouz-Mf-mVw" firstAttribute="centerX" secondItem="Zoj-6x-vll" secondAttribute="centerX" id="xWe-Id-nDK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="ouz-Mf-mVw" id="gI9-Hq-K9W"/>
+                        <outlet property="signupButton" destination="lwj-Cm-6lB" id="6Jk-7f-S6e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ambience-1" width="375" height="667"/>
+        <image name="login-secondary-logo" width="218" height="66"/>
+    </resources>
+</document>
