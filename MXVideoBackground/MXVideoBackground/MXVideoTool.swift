@@ -43,9 +43,9 @@ class MXVideoTool: NSObject {
                     case AVAssetExportSessionStatus.completed:
                         completion(exportSession.outputURL, nil)
                     case AVAssetExportSessionStatus.failed:
-                        print("Failed: \(exportSession.error)")
+                        print("Failed: \(exportSession.error!)")
                     case AVAssetExportSessionStatus.cancelled:
-                        print("Failed: \(exportSession.error)")
+                        print("Failed: \(exportSession.error!)")
                     default:
                         print("DefaultCase")
                     }
